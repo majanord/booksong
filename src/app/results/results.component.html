@@ -1,0 +1,45 @@
+<div class="result">
+    <mat-grid-list cols="2" rowHeight="100px">
+
+        <mat-grid-tile colspan="1" rowspan="1">
+            <h2>Books match</h2>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+            <h2>Songs match</h2>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="2" rowHeight="5:15">
+        <mat-grid-tile >
+            <mat-grid-list cols="3">
+                <mat-list>
+                    <mat-list-item *ngFor="let book of resultsBook">
+                        <h3>
+                            Title: {{ book.title }}
+                        </h3>
+                        <h4>
+                            By: {{ book.author }}
+                        </h4>
+                    </mat-list-item>
+
+                </mat-list>
+                <div class="books" >
+
+
+                </div>
+            </mat-grid-list>
+
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-grid-list cols="3">
+
+            <mat-list class="songs" *ngFor="let song of resultsSong">
+                            <mat-list-item>
+                                {{ song.title }} by: {{ song.artist }}
+                            </mat-list-item>
+
+
+            </mat-list>
+            </mat-grid-list>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -1,0 +1,30 @@
+<mat-grid-list cols="1" rowHeight="7:4">
+    <mat-grid-tile>
+        <mat-card class="example-card" *ngIf="book">
+        <mat-card-header>
+        <mat-card-title>{{ book.title}}</mat-card-title>
+        <mat-card-subtitle>by {{ book.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+            Released:{{book.year}} - genre: {{ book.genre }}
+
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card" *ngIf="song">
+    <mat-card-header>
+        <mat-card-title>{{ song.title}}</mat-card-title>
+        <mat-card-subtitle>By: {{ song.artist }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+            Released: {{ song.year }} <br>
+            length: {{ song.length}} <br>
+        genre: {{ song.genre }}
+
+    </mat-card-content>
+
+</mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

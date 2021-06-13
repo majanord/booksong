@@ -1,0 +1,34 @@
+<div>
+
+
+    <mat-grid-list cols="2" >
+        <mat-grid-tile colspan="1">
+            <mat-card class="card">
+                <mat-card-title ><a routerLink="/music">Songs</a></mat-card-title>
+                <mat-card-content>
+                    <div *ngFor="let song of top3songs">
+                        <a [routerLink]="'/details/song/'+song.id"> {{ song.title }} - {{ song.year }}</a>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+            <mat-card class="card">
+
+            <mat-card-title ><a routerLink="/books">Books</a></mat-card-title>
+            <mat-card-content>
+                <div *ngFor="let book of top3books">
+                    <a [routerLink]="'/details/book/'+book.id"> {{ book.title }} - {{ book.year }}</a>
+                </div>
+            </mat-card-content>
+            </mat-card>
+
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="2" rowHeight="5:1">
+
+    </mat-grid-list>
+
+
+
+</div>

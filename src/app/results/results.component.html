@@ -9,7 +9,7 @@
         </mat-grid-tile>
     </mat-grid-list>
     <mat-grid-list cols="2" rowHeight="5:15">
-        <mat-grid-tile >
+        <mat-grid-tile>
             <mat-grid-list cols="3">
                 <mat-list>
                     <mat-list-item *ngFor="let book of resultsBook">
@@ -22,7 +22,7 @@
                     </mat-list-item>
 
                 </mat-list>
-                <div class="books" >
+                <div class="books">
 
 
                 </div>
@@ -32,13 +32,13 @@
         <mat-grid-tile>
             <mat-grid-list cols="3">
 
-            <mat-list class="songs" *ngFor="let song of resultsSong">
-                            <mat-list-item>
-                                {{ song.title }} by: {{ song.artist }}
-                            </mat-list-item>
+                <mat-list class="songs" *ngFor="let song of resultsSong">
+                    <mat-list-item>
+                        {{ song.title }} by: {{ song.artist }}
+                    </mat-list-item>
 
 
-            </mat-list>
+                </mat-list>
             </mat-grid-list>
         </mat-grid-tile>
     </mat-grid-list>

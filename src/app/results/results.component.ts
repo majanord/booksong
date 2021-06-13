@@ -1,32 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import {Book, Song} from "../objects/item";
-import {ListService} from "../list.service";
-import {ActivatedRoute} from "@angular/router";
+import { Book, Song } from "../objects/item";
+import { ListService } from "../list.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-results',
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.scss']
+    selector: 'app-results',
+    templateUrl: './results.component.html',
+    styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
     type: string = '';
     searchTerm: string = '';
-    resultsBook: Book[] =  [];
-    resultsSong: Song[] =  [];
+    resultsBook: Book[] = [];
+    resultsSong: Song[] = [];
 
-    constructor(private _listService: ListService,  private _route: ActivatedRoute) { }
+    constructor(private _listService: ListService, private _route: ActivatedRoute) { }
 
     ngOnInit(): void {
         this.type = this._route.snapshot.paramMap.get('type') || 'both';
         this.searchTerm = decodeURI(this._route.snapshot.paramMap.get('searchTerm') || '');
         this._listService.songReady.subscribe((ready) => {
-            if(ready) {
+            if (ready) {
                 this.search(this.searchTerm);
 
             }
         });
         this._listService.bookReady.subscribe((ready) => {
-            if(ready) {
+            if (ready) {
                 this.search(this.searchTerm);
 
             }

@@ -4,22 +4,19 @@
             <form class="search-form">
                 <mat-form-field class="">
                     <mat-label>Search</mat-label>
-                    <input matInput placeholder="Search" name="search"
-                           [(ngModel)]="searchTerm"
-                           (keyup.enter)="search(searchTerm)"
-                           (blur)="search(searchTerm)"
-                    >
+                    <input matInput placeholder="Search" name="search" [(ngModel)]="searchTerm"
+                        (keyup.enter)="search(searchTerm)" (blur)="search(searchTerm)">
                     <mat-icon matSuffix [routerLink]="'result/'+type+'/'+searchTerm">search</mat-icon>
                 </mat-form-field>
             </form>
         </mat-grid-tile>
-       <mat-grid-tile>
-           <mat-radio-group class="group" aria-label="Select an option" [(ngModel)]="type">
-               <mat-radio-button class="button" value="book">Books</mat-radio-button>
-               <mat-radio-button class="button" value="song">Songs</mat-radio-button>
-               <mat-radio-button class="button" value="both">Both</mat-radio-button>
-           </mat-radio-group>
-       </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-radio-group class="group" aria-label="Select an option" [(ngModel)]="type">
+                <mat-radio-button class="button" value="book">Books</mat-radio-button>
+                <mat-radio-button class="button" value="song">Songs</mat-radio-button>
+                <mat-radio-button class="button" value="both">Both</mat-radio-button>
+            </mat-radio-group>
+        </mat-grid-tile>
 
 
     </mat-grid-list>

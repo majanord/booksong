@@ -18,21 +18,21 @@ export interface ISong {
 
 export class Item<T> {
 
-  constructor() {
+    constructor() {
 
-  }
+    }
 
-  search(searchTerm: string): boolean {
-      return Object.values(this).find((value:any) => {
-          if(typeof value === 'string') {
-              return value.includes(searchTerm);
-          }
-          return false;
-      }) !== undefined;
-  }
+    search(searchTerm: string): boolean {
+        return Object.values(this).find((value: any) => {
+            if (typeof value === 'string') {
+                return value.includes(searchTerm);
+            }
+            return false;
+        }) !== undefined;
+    }
 }
 
-export class Book extends Item<IBook> implements IBook{
+export class Book extends Item<IBook> implements IBook {
     id: number;
     title: string;
     author: string;
@@ -52,7 +52,7 @@ export class Book extends Item<IBook> implements IBook{
     }
 }
 
-export class Song extends Item<ISong> implements ISong{
+export class Song extends Item<ISong> implements ISong {
     id: string;
     title: string;
     artist: string;

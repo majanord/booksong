@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {Item, Book, Song} from '../objects/item';
-import {ListService} from "../list.service";
+import { Item, Book, Song } from '../objects/item';
+import { ListService } from "../list.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
     top3songs: Song[] = [];
